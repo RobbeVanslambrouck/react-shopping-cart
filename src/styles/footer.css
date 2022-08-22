@@ -1,0 +1,31 @@
+footer {
+  min-height: 5rem;
+  box-shadow: 3px -3px 10px 3px #ddd;
+  display: flex;
+  column-gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 1.2rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  column-gap: 0.2rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+  }
+
+footer a svg {
+  height: 1.6rem;
+}
+
+footer a p {
+  text-align: center;
+  text-transform: capitalize;
+}

@@ -1,0 +1,35 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  height: 7rem;
+  box-shadow: 3px 3px 10px 3px #ddd;
+}
+
+header a {
+  color: #000000;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+header h1 a {
+   font-size: 2.5rem;
+   font-weight: bold;
+   line-height: 7rem;
+   margin-left: 2rem;
+   text-overflow: clip;
+ }
+   
+header h1 a:hover {
+  text-decoration: underline;
+}
+
+nav {
+  margin-right: 2rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.7rem;
+}
