@@ -20,7 +20,7 @@ header h1 a {
    text-overflow: clip;
  }
    
-header h1 a:hover {
+header a:hover {
   text-decoration: underline;
 }
 
