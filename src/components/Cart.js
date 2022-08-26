@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import CartContext from "./CartContext";
 
 const Cart = (props) => {
-  const [items, setItems] = useState([]);
+  const { cart, setCart } = useContext(CartContext);
 
   const handleClickCart = () => {
     if (props.onClick) {
-      props.onClick(items);
+      props.onClick();
     }
   };
 
@@ -13,7 +14,7 @@ const Cart = (props) => {
     <div>
       <button onClick={handleClickCart}>
         <p className="sr-only">cart</p>
-        <p className="item-count">{items.length}</p>
+        <p className="item-count">{Object.keys(cart).length}</p>
       </button>
     </div>
   );

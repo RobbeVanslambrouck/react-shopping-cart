@@ -1,16 +1,17 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/header.css";
 import Cart from "./Cart";
+import CartContext from "./CartContext";
 import CartModal from "./CartModal";
 
 const Header = () => {
-  const [cartItems, setCartItems] = useState([]);
   const [modalIsVisible, setModalIsVisible] = useState(false);
-  const onClickCart = (items) => {
-    setCartItems(items);
+  const onClickCart = () => {
     setModalIsVisible(true);
   };
+
+  const { cart, setCart } = useContext(CartContext);
   return (
     <header>
       <h1 className="logo">
@@ -30,9 +31,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      {modalIsVisible && (
-        <CartModal setIsVisible={setModalIsVisible} items={cartItems} />
-      )}
+      {modalIsVisible && <CartModal setIsVisible={setModalIsVisible} />}
     </header>
   );
 };
