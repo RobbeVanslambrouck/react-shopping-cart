@@ -7,7 +7,7 @@ const Item = ({ item, onAddToCard }) => {
   };
 
   const handleAmountChange = (e) => {
-    setAmount(e.target.value);
+    setAmount(parseInt(e.target.value));
   };
 
   return (

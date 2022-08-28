@@ -9,11 +9,14 @@ function Shop() {
   const [items, setItems] = useState(shopItems);
   const { cart, setCart } = useContext(CartContext);
   const addItemToCart = (item, amount) => {
-    let newCart = Object.assign({}, cart);
-    if (newCart[item.id]) {
-      newCart[item.id] += parseInt(amount);
+    let newCart = [...cart];
+    let itemIndex = newCart.findIndex((e) => e.id === item.id);
+    if (itemIndex !== -1) {
+      newCart[itemIndex].amount += parseInt(amount);
     } else {
-      newCart[item.id] = amount;
+      let newItem = item;
+      newItem.amount = parseInt(amount);
+      newCart.push(newItem);
     }
     setCart(newCart);
   };

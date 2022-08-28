@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import CartContext from "./CartContext";
+import "../styles/cartModal.css";
+import CartItem from "./CartItem";
 
 const CartModal = ({ setIsVisible = () => {} }) => {
   const { cart, setCart } = useContext(CartContext);
@@ -15,9 +17,16 @@ const CartModal = ({ setIsVisible = () => {} }) => {
 
   return (
     <div className="modal">
-      <button onClick={handleCheckout}>checkout</button>
-      <button onClick={handleCancel}>add more</button>
-      <p>{Object.keys(cart).length}</p>
+      <p>{cart.length}</p>
+      <div className="items">
+        {cart.map((item) => (
+          <CartItem item={item} key={item.id} />
+        ))}
+      </div>
+      <div className="actions">
+        <button onClick={handleCheckout}>checkout</button>
+        <button onClick={handleCancel}>add more</button>
+      </div>
     </div>
   );
 };
