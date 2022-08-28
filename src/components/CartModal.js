@@ -6,6 +6,7 @@ import CartItem from "./CartItem";
 const CartModal = ({ setIsVisible = () => {} }) => {
   const { cart, setCart } = useContext(CartContext);
 
+  const price = cart.reduce((prev, curr) => prev + curr.price * curr.amount, 0);
   const handleCheckout = () => {
     setIsVisible(false);
     // go to checkout
@@ -22,6 +23,9 @@ const CartModal = ({ setIsVisible = () => {} }) => {
         {cart.map((item) => (
           <CartItem item={item} key={item.id} />
         ))}
+      </div>
+      <div className="total-price">
+        <span>&#8364;</span> {price}
       </div>
       <div className="actions">
         <button onClick={handleCheckout}>checkout</button>
