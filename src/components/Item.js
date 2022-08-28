@@ -14,6 +14,9 @@ const Item = ({ item, onAddToCard }) => {
     <div className="item">
       <p>{item.name}</p>
       <img alt={item.name} src={item.imgUrl} />
+      <div className="price">
+        <span>&#8364;</span> {item.price}
+      </div>
       <input
         type="number"
         name="amount"
