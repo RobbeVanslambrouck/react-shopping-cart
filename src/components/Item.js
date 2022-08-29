@@ -11,20 +11,23 @@ const Item = ({ item, onAddToCard }) => {
   };
 
   return (
-    <div className="item">
-      <p>{item.name}</p>
+    <div className="shop-item">
       <img alt={item.name} src={item.imgUrl} />
-      <div className="price">
-        <span>&#8364;</span> {item.price}
+      <p className="item-name">{item.name}</p>
+      <div className="item-price">
+        <span>&#8364;</span>
+        {item.price}
       </div>
-      <input
-        type="number"
-        name="amount"
-        onChange={handleAmountChange}
-        min={1}
-        value={amount}
-      />
-      <button onClick={handleAddToCart}>add to cart</button>
+      <div className="item-cart">
+        <input
+          type="number"
+          name="amount"
+          onChange={handleAmountChange}
+          min={1}
+          value={amount}
+        />
+        <button onClick={handleAddToCart}>add to cart</button>
+      </div>
     </div>
   );
 };

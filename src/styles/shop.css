@@ -1,0 +1,62 @@
+.shop-items {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: flex-start;
+}
+
+.shop-item {
+  display: grid;
+  grid-template-rows: 3rem auto 2.5rem  ;
+  grid-template-areas:  "img name"
+                        "img price"
+                        "img cart";
+  flex-direction: column;
+  font-size: 1.6rem;
+  gap: 0.5rem;
+  border: 1px solid lightgrey;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.shop-item img {
+  grid-area: img;
+  justify-self: center;
+  align-self: center;
+  width: 100%;
+  max-width: 15rem;
+}
+
+.shop-item .item-name {
+  grid-area: name;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+.shop-item .item-price {
+  grid-area: price;
+}
+
+.shop-item .item-cart {
+  grid: cart;
+  display: flex;
+  gap: 1rem;
+}
+
+.shop-item .item-cart input {
+  font-size: 1.4rem;
+  max-width: 5rem;
+}
+
+.shop-item .item-cart button {
+  font-size: 1.4rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .shop-items {
+    max-width: 100rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  }
+}

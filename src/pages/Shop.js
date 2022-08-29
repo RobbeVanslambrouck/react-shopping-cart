@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import Item from "../components/Item";
 import shopItems from "../shopItems";
 import CartContext from "../components/CartContext";
+import "../styles/shop.css";
 
 function Shop() {
   const [items, setItems] = useState(shopItems);
@@ -24,8 +25,7 @@ function Shop() {
     <div className="shop">
       <Header />
       <main>
-        <p>shop</p>
-        <ul>
+        <ul className="shop-items">
           {items.map((item) => (
             <li key={item.id}>
               <Item item={item} onAddToCard={addItemToCart} />
