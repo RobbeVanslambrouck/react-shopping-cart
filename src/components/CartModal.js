@@ -18,14 +18,13 @@ const CartModal = ({ setIsVisible = () => {} }) => {
 
   return (
     <div className="modal">
-      <p>{cart.length}</p>
-      <div className="items">
+      <div className="cart-items">
         {cart.map((item) => (
           <CartItem item={item} key={item.id} />
         ))}
       </div>
       <div className="total-price">
-        <span>&#8364;</span> {price}
+        <span>&#8364;</span> {Math.round(price * 100) / 100}
       </div>
       <div className="actions">
         <button onClick={handleCheckout}>checkout</button>

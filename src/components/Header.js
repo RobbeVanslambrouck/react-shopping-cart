@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/header.css";
 import Cart from "./Cart";
-import CartContext from "./CartContext";
 import CartModal from "./CartModal";
 
 const Header = () => {
@@ -11,7 +10,6 @@ const Header = () => {
     setModalIsVisible(true);
   };
 
-  const { cart, setCart } = useContext(CartContext);
   return (
     <header>
       <h1 className="logo">

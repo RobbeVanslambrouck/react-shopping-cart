@@ -28,17 +28,19 @@ const CartItem = ({ item }) => {
 
   return (
     <div className="cart-item">
-      <p>{item.name}</p>
       <img alt={item.name} src={item.imgUrl} />
-      <button onClick={handleDecrement}>-</button>
-      <input
-        type="number"
-        name="amount"
-        onChange={handleAmountChange}
-        min={1}
-        value={amount}
-      />
-      <button onClick={handleIncrement}>+</button>
+      <p className="item-name">{item.name}</p>
+      <div className="cart-amount">
+        <button onClick={handleDecrement}>-</button>
+        <input
+          type="number"
+          name="amount"
+          onChange={handleAmountChange}
+          min={1}
+          value={amount}
+        />
+        <button onClick={handleIncrement}>+</button>
+      </div>
     </div>
   );
 };

@@ -7,7 +7,8 @@
   height: 100%;
   overflow: auto;
   background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
 }
 
 .modal .actions {
@@ -24,4 +25,62 @@
   border: none;
   text-transform: capitalize;
   font-weight: 600;
+}
+
+.modal .cart-items {
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 1rem auto;
+}
+
+.modal .cart-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid white;
+}
+
+.modal .cart-item img {
+  width: 6rem;
+}
+.modal .cart-item .item-name {
+font-size: 1.8rem;
+font-weight: 600;
+text-transform: capitalize;
+}
+
+.modal .total-price::before { 
+  content: 'Total: ';
+}
+
+.modal .total-price {
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.modal .cart-amount {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.modal .cart-amount button {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  font-size: 2rem;
+  font-weight: 1000;
+  border: 1px solid white;
+  border-radius: 4px;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  padding: 0;
+}
+
+.modal .cart-amount input {
+  max-width: 5rem;
+  border-radius: 4px;
 }
