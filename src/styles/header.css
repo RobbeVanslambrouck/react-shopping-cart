@@ -1,7 +1,7 @@
 header {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   height: 7rem;
   box-shadow: 3px 3px 10px 3px #ddd;
 }
@@ -26,10 +26,13 @@ header a:hover {
 
 nav {
   margin-right: 2rem;
+  height: 100%;
 }
 
 nav ul {
   display: flex;
+  height: 100%;
+  align-items: center;
   gap: 1.5rem;
   font-size: 1.7rem;
 }
