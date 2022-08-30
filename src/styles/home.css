@@ -1,0 +1,25 @@
+.home {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.home .home-statement {
+  padding-top: 10rem;
+  color: darkgray;
+}
+
+.home .home-slogan {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.home button {
+  width: 15rem;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-top: 10rem;
+
+}
