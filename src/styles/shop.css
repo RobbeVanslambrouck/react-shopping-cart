@@ -21,10 +21,11 @@
 
 .shop-item img {
   grid-area: img;
+  object-fit: cover;
   justify-self: center;
   align-self: center;
-  width: 100%;
-  max-width: 15rem;
+  width: 13rem;
+  height: 13rem;
 }
 
 .shop-item .item-name {
@@ -84,6 +85,6 @@
     max-width: 100rem;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   }
 }

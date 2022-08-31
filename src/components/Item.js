@@ -12,7 +12,7 @@ const Item = ({ item, onAddToCard }) => {
 
   return (
     <div className="shop-item">
-      <img alt={item.name} src={item.imgUrl} />
+      <img alt={item.name} src={process.env.PUBLIC_URL + item.imgUrl} />
       <p className="item-name">{item.name}</p>
       <div className="item-price">
         <span>&#8364;</span>

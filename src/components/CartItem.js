@@ -28,7 +28,7 @@ const CartItem = ({ item }) => {
 
   return (
     <div className="cart-item">
-      <img alt={item.name} src={item.imgUrl} />
+      <img alt={item.name} src={process.env.PUBLIC_URL + item.imgUrl} />
       <p className="item-name">{item.name}</p>
       <div className="cart-amount">
         <button onClick={handleDecrement}>-</button>
