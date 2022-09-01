@@ -10,9 +10,17 @@ const RouteSwitch = () => {
     <BrowserRouter>
       <CartContext.Provider value={{ cart, setCart }}>
         <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/home" element={<Home />}></Route>
-          <Route path="/shop" element={<Shop />}></Route>
+          <Route path="react-shopping-cart/" exact element={<Home />}></Route>
+          <Route
+            path="react-shopping-cart/home"
+            exact
+            element={<Home />}
+          ></Route>
+          <Route
+            path="react-shopping-cart/shop"
+            exact
+            element={<Shop />}
+          ></Route>
         </Routes>
       </CartContext.Provider>
     </BrowserRouter>

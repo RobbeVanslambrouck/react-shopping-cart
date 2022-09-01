@@ -13,16 +13,16 @@ const Header = () => {
   return (
     <header>
       <h1 className="logo">
-        <Link to="/">some shop</Link>
+        <Link to="/react-shopping-cart/">some shop</Link>
       </h1>
 
       <nav>
         <ul>
           <li>
-            <Link to="/home">home</Link>
+            <Link to="/react-shopping-cart/home">home</Link>
           </li>
           <li>
-            <Link to="/shop">shop</Link>
+            <Link to="/react-shopping-cart/shop">shop</Link>
           </li>
           <li>
             <Cart onClick={onClickCart} />

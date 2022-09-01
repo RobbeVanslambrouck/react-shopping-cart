@@ -7,7 +7,7 @@ function Home() {
   const navigate = useNavigate();
 
   const handleAction = () => {
-    navigate("/shop");
+    navigate("/react-shopping-cart/shop");
   };
 
   return (
